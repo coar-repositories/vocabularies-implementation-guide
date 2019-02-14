@@ -18,3 +18,7 @@ The URL prefix http://purl.org/coar is reserved as the namespace for the concept
 
 The Resource Type vocabulary defines concepts to identify the genre of a resource. The Resource Type vocabulary builds on and extends the controlled list of publication types defined in info:eu-repo/semantics. 
 
+	* 50 concepts supported
+	* Labels available in (currently) 14 languages including Arabic, Catalan, Chinese, 	Czech, Dutch, English, French, German, Italian, Portuguese, Russian, Spanish, 		Japanese, Turkish.
+	* Concepts are assigned permanent identifiers (URIs)
+	* Hierarchical structure
