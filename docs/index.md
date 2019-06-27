@@ -64,7 +64,7 @@ bookPart | bookPart  | book part | http://purl.org/coar/resource_type/c_3248
 
 COAR vocabularies can be implemented in repositories operating on DSpace by customising input forms or using the Dspace software functionality.
 
-[image to be added]
+![GitHub Logo](https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/1_workflow.png)
 
 DSpace supports controlled vocabularies in search and submission process. Supported controlled vocabularies are expressed in a simple XML format ("DSpace node schema"). All information about a term is enclosed in a <node> element. Only the expression of a hierarchical relationship is allowed through the use of the <isComposedBy> sub element. By using <hasNote> a simple annotation mechanism becomes possible. Hierarchical Taxonomies and Controlled Vocabularies are well explained in <a href="https://wiki.duraspace.org/display/DSDOC5x/Authority+Control+of+Metadata+Values#AuthorityControlofMetadataValues-HierarchicalTaxonomiesandControlledVocabularies "> DuraSpace wiki</a> pages. <a href="http://dspace.2283337.n4.nabble.com/dspace-Patches-1833347-Controlled-Vocabulary-Add-on-update-Patch-for-DSpace-1-4-2-td3289431.html"> DSpace developer community forums</a> may also helpful for relevant update patches.
 
@@ -157,7 +157,7 @@ Samvera (and some of its variants, including Hyrax and Haiku), is designed, 'out
 
 The format of the file used by QA is very simple, essentially linking the URI of each term in the vocabulary to the label which will be used in the repository's user interface. The data model in Samvera is already a linked-data graph, so the URIs in the vocabulary are used directly by the repository in metadata records.
 
-## **Repositories implemented COAR Controlled Vocabularies**
+## **Repositories which have implemented COAR Controlled Vocabularies**
 
 | Country | Institution | Software | Repository Name | Type of implementation
 | ----------- | -------- | --------------- | ---------------------- | -------------|
