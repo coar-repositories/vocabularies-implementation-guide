@@ -132,12 +132,12 @@ Current version of the vocabulary is <a href="http://vocabularies.coar-repositor
 </table>
 <h2 id="implementation-in-dspace-and-dspace-cris"><strong>Implementation in DSpace and DSpace-CRIS</strong></h2>
 <p>COAR vocabularies can be implemented in repositories operating on DSpace by customising input forms or using the Dspace software functionality.</p>
-<p><img alt="GitHub Logo" src="https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/1_workflow.png" /></p>
+<p><img alt="DSpace workflow approach" src="https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/1_workflow.png" /><p align="center"> Figure 1. DSpace workflow approach</a></p>
 <p>DSpace supports controlled vocabularies in search and submission process. Supported controlled vocabularies are expressed in a simple XML format ("DSpace node schema"). All information about a term is enclosed in a <node> element. Only the expression of a hierarchical relationship is allowed through the use of the <isComposedBy> sub element. By using <hasNote> a simple annotation mechanism becomes possible. Hierarchical Taxonomies and Controlled Vocabularies are well explained in <a href="https://wiki.duraspace.org/display/DSDOC5x/Authority+Control+of+Metadata+Values#AuthorityControlofMetadataValues-HierarchicalTaxonomiesandControlledVocabularies "> DuraSpace wiki</a> pages. <a href="http://dspace.2283337.n4.nabble.com/dspace-Patches-1833347-Controlled-Vocabulary-Add-on-update-Patch-for-DSpace-1-4-2-td3289431.html"> DSpace developer community forums</a> may also helpful for relevant update patches.</p>
 <p>In DSpace, you have two options to implement COAR Controlled Vocabularies. Option 1 includes a dropdown list of the fields to allow the submitter to select one option. Option 2 uses the <a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=19006518 ">internal controlled vocabularies functionality</a> in DSpace.</p>
 <h3 id="option-1-dropdown"><strong>Option 1: Dropdown</strong></h3>
 <p>This option includes a dropdown list of the fields to allow the submitter to select one option. You may find the implementation steps below:</p>
-<p>[image to be added]</p>
+<p><img alt="Option 1" src="https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/2_option1_dropdown.png" /><p align="center"> Figure 2. Option 1: Dropdown</a></p>
 <p>1.Create a separate <form- definition> for each community per type inside the input-forms.xml file.</p>
 <pre><code>&lt;name-map collection-handle="1111/33333" form-name="book" /&gt;
 </code></pre>
@@ -156,7 +156,7 @@ Current version of the vocabulary is <a href="http://vocabularies.coar-repositor
 <p>3.Provide a way to show (flat term) type name instead of URL eg. Show "software" instead of &gt; http://purl.org/coar/resource_type/c_5ce6   </p>
 <h3 id="option-2-using-dspace-functionality"><strong>Option 2: Using Dspace Functionality</strong></h3>
 <p>This option uses the internal functionality of controlled vocabularies in Dspace to present the COAR types. Note that this prototype implementation is valid Dspace version 5 and above. You may find the implementation steps below:</p>
-<p>[image to be added]</p>
+<p><img alt="Option 2" src="https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/3_option2_DSpace_functionality.png" /><p align="center"> Figure 3. Option 2: Using DSpace Functionality</a></p>
 <p>1.Insert provided coar-types.xml in ${DSpace_HOME}/dspace/config/controlled-vocabularies/</p>
 <p>2.Switch in ${DSpace_HOME}/dspace/config/input-forms.xml at dc:type field and change input type for <input-type >onebox</input-type> and insert in the same field the tag <vocabulary closed="true">coar-types</vocabulary>, this tag forces the input to be only through the plugin.</p>
 <p>3.Example of the field in input-forms.xml:</p>
@@ -337,5 +337,5 @@ Provide at least two values:
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-06-27 21:06:13
+Build Date UTC : 2019-06-27 21:27:42
 -->
