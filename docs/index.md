@@ -64,7 +64,7 @@ bookPart | bookPart  | book part | http://purl.org/coar/resource_type/c_3248
 
 COAR vocabularies can be implemented in repositories operating on DSpace by customising input forms or using the Dspace software functionality.
 
-![GitHub Logo](https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/1_workflow.png)
+![DSpace workflow approach](https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/1_workflow.png)<p align="center"> Figure 1. DSpace workflow approach</a>
 
 DSpace supports controlled vocabularies in search and submission process. Supported controlled vocabularies are expressed in a simple XML format ("DSpace node schema"). All information about a term is enclosed in a <node> element. Only the expression of a hierarchical relationship is allowed through the use of the <isComposedBy> sub element. By using <hasNote> a simple annotation mechanism becomes possible. Hierarchical Taxonomies and Controlled Vocabularies are well explained in <a href="https://wiki.duraspace.org/display/DSDOC5x/Authority+Control+of+Metadata+Values#AuthorityControlofMetadataValues-HierarchicalTaxonomiesandControlledVocabularies "> DuraSpace wiki</a> pages. <a href="http://dspace.2283337.n4.nabble.com/dspace-Patches-1833347-Controlled-Vocabulary-Add-on-update-Patch-for-DSpace-1-4-2-td3289431.html"> DSpace developer community forums</a> may also helpful for relevant update patches.
 
@@ -74,7 +74,7 @@ In DSpace, you have two options to implement COAR Controlled Vocabularies. Optio
 
 This option includes a dropdown list of the fields to allow the submitter to select one option. You may find the implementation steps below:
 
-[image to be added]
+![Option 1](https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/2_option1_dropdown.png)<p align="center"> Figure 2. Option 1: Dropdown</a>
 
 1.Create a separate <form- definition> for each community per type inside the input-forms.xml file.
 
@@ -100,7 +100,7 @@ This option includes a dropdown list of the fields to allow the submitter to sel
 
 This option uses the internal functionality of controlled vocabularies in Dspace to present the COAR types. Note that this prototype implementation is valid Dspace version 5 and above. You may find the implementation steps below:
 
-[image to be added]
+![Option 2](https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/3_option2_DSpace_functionality.png)<p align="center"> Figure 3. Option 2: Using DSpace Functionality</a>
 
 1.Insert provided coar-types.xml in ${DSpace_HOME}/dspace/config/controlled-vocabularies/
 
