@@ -55,7 +55,10 @@
         <li class="main active"><a href="#vocabularies-implementation-guide">Vocabularies Implementation Guide</a></li>
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#coar-controlled-vocabularies">COAR Controlled Vocabularies</a></li>
-            <li><a href="#implementing-controlled-vocabularies">Implementing Controlled Vocabularies</a></li>
+            <li><a href="#mapping-vocabularies">Mapping vocabularies</a></li>
+            <li><a href="#implementation-in-dspace-and-dspace-cris">Implementation in DSpace and DSpace-CRIS</a></li>
+            <li><a href="#implementation-in-samvera-including-hyrax">Implementation in Samvera (including Hyrax)</a></li>
+            <li><a href="#repositories-implemented-coar-controlled-vocabularies">Repositories implemented COAR Controlled Vocabularies</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -65,11 +68,11 @@
 <p>The use of controlled vocabularies for bibliographic metadata "ensures that everyone is using the same word to mean the same thing". The continuous review update and maintenance of the COAR Controlled Vocabularies and their adoption by the most commonly used open repository software is a way to enhance the interoperability across repositories and with other related systems such as harvesters, CRIS systems, data repositories and publishers.</p>
 <h2 id="coar-controlled-vocabularies"><strong>COAR Controlled Vocabularies</strong></h2>
 <p>COAR actively works towards the alignment of repository networks and other systems via technical and semantic interoperability, as well as common approaches to policy and services. In 2014, COAR established the Interest Group "Controlled Vocabularies for Repository Assets" to develop a set of controlled vocabularies for the bibliographic metadata elements used in records describing research outputs.</p>
-<p>The <a https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/ >COAR Controlled Vocabularies</a> are governed and maintained by the Editorial Board. In order to define the controlled vocabularies, the Editorial Board analyses existing vocabularies and dictionaries and will use the most appropriate existing terms whenever possible. In the case where there are gaps, new terms are defined by the group.</p>
+<p>The <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies">COAR Controlled Vocabularies</a> are governed and maintained by the Editorial Board. In order to define the controlled vocabularies, the Editorial Board analyses existing vocabularies and dictionaries and will use the most appropriate existing terms whenever possible. In the case where there are gaps, new terms are defined by the group.</p>
 <p>The COAR Controlled Vocabularies are described in SKOS. In SKOS, concepts are identified using URIs, labels to the concepts are uniquely offered in multiple languages, notes allow for description, as well as different annotations and concepts from other vocabularies can be linked. Workflow and web-based editorial processes are managed on VocBench.</p>
-<p>The URL prefix http://purl.org/coar is reserved as the namespace for the concepts of the COAR Controlled Vocabularies. <a https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/controlled-vocabularies-faq/ >FAQs</a> for COAR Controlled Vocabularies are available.</p>
+<p>The URL prefix http://purl.org/coar is reserved as the namespace for the concepts of the COAR Controlled Vocabularies. <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/controlled-vocabularies-faq">FAQs</a> for COAR Controlled Vocabularies are available.</p>
 <h3 id="resource-type-vocabulary"><strong>Resource type vocabulary</strong></h3>
-<p>The <a https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/deliverables/ >Resource Type vocabulary</a> defines concepts to identify the genre of a resource. The Resource Type vocabulary builds on and extends the controlled list of publication types defined in info:eu-repo/semantics.
+<p>The <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/deliverables">Resource Type vocabulary</a> defines concepts to identify the genre of a resource. The Resource Type vocabulary builds on and extends the controlled list of publication types defined in info:eu-repo/semantics.
 <ul>
  <li>50 concepts supported
  <li>Labels available in (currently) 14 languages including Arabic, Catalan, Chinese, Czech, Dutch, English, French, German, Italian, Portuguese, Russian, Spanish, Japanese, Turkish.
@@ -78,9 +81,9 @@
  <li>Mappings ('matches') to terms of other controlled vocabularies
  <li>Published under CC-BY 4.0
 </ul>
-Current version of the vocabulary is <a http://vocabularies.coar-repositories.org/documentation/resource_types/2.0.draft/ >Resource Type Vocabulary v.2.0 Draft</a> (May 2018) and github files for <a https://github.com/coar-repositories/vocabularies/tree/master/resource_types >SKOS-XL RDF</a> and changelog are available at the given links.</p>
+Current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/resource_types/2.0.draft">Resource Type Vocabulary v.2.0 Draft</a> (May 2018) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/resource_types">SKOS-XL RDF</a> and changelog are available at the given links.</p>
 <h3 id="access-rights"><strong>Access rights</strong></h3>
-<p><a https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/> The Access Rights vocabulary</a> defines concepts to declare the access status of a resource. Multilingual labels regard regional distinctions in language and term. It builds on access rights defined in info:eu-repo/semantics</p>
+<p><a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary"> The Access Rights vocabulary</a> defines concepts to declare the access status of a resource. Multilingual labels regard regional distinctions in language and term. It builds on access rights defined in info:eu-repo/semantics</p>
 <ul>
  <li>4 concepts supported
  <li>Labels available in (currently) 6 languages including English, Spanish, Turkish, French, Japanese, German.
@@ -90,12 +93,11 @@ Current version of the vocabulary is <a http://vocabularies.coar-repositories.or
  <li>Published under CC-BY 4.0
 </ul>
 
-<p>Current version of the vocabulary is <a http://vocabularies.coar-repositories.org/documentation/access_rights/  >Access Rights Vocabulary v.1.0</a>  (January 2019) and github files for <a https://github.com/coar-repositories/vocabularies/tree/master/access_rights >SKOS-XL RDF</a> and changelog are available at the given link.</p>
+<p>Current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/access_rights">Access Rights Vocabulary v.1.0</a>  (January 2019) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/access_rights">SKOS-XL RDF</a> and changelog are available at the given link.</p>
 <h3 id="version-types"><strong>Version types</strong></h3>
-<p><a https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/version-type-vocabulary >The Version Type vocabulary</a> defines concepts to declare the version of a resource. Multilingual labels regard regional distinctions in language and term. The concepts are adopted from the "<a https://www.niso.org/publications/niso-rp-8-2008-jav >Journal Article Versions (JAV): Recommendations of the NISO/ALPSP JAV Technical Working Group</a>".</p>
-<p>Current version of the vocabulary is <a http://vocabularies.coar-repositories.org/documentation/version_types/ >Version Type Vocabulary v.1 Draft</a> (July 2018) and github files for <a href=" https://github.com/coar-repositories/vocabularies/tree/master/version_types/snapshot">SKOS-XL RDF</a> and changelog  are available at the given link.</p>
-<h2 id="implementing-controlled-vocabularies"><strong>Implementing Controlled Vocabularies</strong></h2>
-<h3 id="mapping-vocabularies"><strong>Mapping vocabularies</strong></h3>
+<p><a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/version-type-vocabulary">The Version Type vocabulary</a> defines concepts to declare the version of a resource. Multilingual labels regard regional distinctions in language and term. The concepts are adopted from the "<a href="https://www.niso.org/publications/niso-rp-8-2008-jav">Journal Article Versions (JAV): Recommendations of the NISO/ALPSP JAV Technical Working Group</a>".</p>
+<p>Current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/version_types">Version Type Vocabulary v.1 Draft</a> (July 2018) and github files for <a href=" https://github.com/coar-repositories/vocabularies/tree/master/version_types/snapshot">SKOS-XL RDF</a> and changelog  are available at the given link.</p>
+<h2 id="mapping-vocabularies"><strong>Mapping vocabularies</strong></h2>
 <p>To implement vocabularies locally, you may need to map the other terms of locally used vocabularies with COAR Controlled Vocabularies concepts.</p>
 <p>Please note that it is not mandatory to use the whole set of concepts in COAR Vocabularies. COAR Vocabularies are offered in a hierarchical structure and depending on the needs of the repository, you may decide not to use some of the concepts and/or labels. See an example of mapping table below:</p>
 <table>
@@ -128,12 +130,12 @@ Current version of the vocabulary is <a http://vocabularies.coar-repositories.or
 </tr>
 </tbody>
 </table>
-<h3 id="implementing-controlled-vocabularies-in-dspace-and-dspace-cris"><strong>Implementing Controlled Vocabularies in DSpace and DSpace-CRIS</strong></h3>
+<h2 id="implementation-in-dspace-and-dspace-cris"><strong>Implementation in DSpace and DSpace-CRIS</strong></h2>
 <p>COAR vocabularies can be implemented in repositories operating on DSpace by customising input forms or using the Dspace software functionality.</p>
 <p>[image to be added]</p>
 <p>DSpace supports controlled vocabularies in search and submission process. Supported controlled vocabularies are expressed in a simple XML format ("DSpace node schema"). All information about a term is enclosed in a <node> element. Only the expression of a hierarchical relationship is allowed through the use of the <isComposedBy> sub element. By using <hasNote> a simple annotation mechanism becomes possible. Hierarchical Taxonomies and Controlled Vocabularies are well explained in <a href="https://wiki.duraspace.org/display/DSDOC5x/Authority+Control+of+Metadata+Values#AuthorityControlofMetadataValues-HierarchicalTaxonomiesandControlledVocabularies "> DuraSpace wiki</a> pages. <a href="http://dspace.2283337.n4.nabble.com/dspace-Patches-1833347-Controlled-Vocabulary-Add-on-update-Patch-for-DSpace-1-4-2-td3289431.html"> DSpace developer community forums</a> may also helpful for relevant update patches.</p>
 <p>In DSpace, you have two options to implement COAR Controlled Vocabularies. Option 1 includes a dropdown list of the fields to allow the submitter to select one option. Option 2 uses the <a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=19006518 ">internal controlled vocabularies functionality</a> in DSpace.</p>
-<h4 id="option-1-dropdown"><strong>Option 1: Dropdown</strong></h4>
+<h3 id="option-1-dropdown"><strong>Option 1: Dropdown</strong></h3>
 <p>This option includes a dropdown list of the fields to allow the submitter to select one option. You may find the implementation steps below:</p>
 <p>[image to be added]</p>
 <p>1.Create a separate <form- definition> for each community per type inside the input-forms.xml file.</p>
@@ -152,7 +154,7 @@ Current version of the vocabulary is <a http://vocabularies.coar-repositories.or
 &lt;/field&gt;
 </code></pre>
 <p>3.Provide a way to show (flat term) type name instead of URL eg. Show "software" instead of &gt; http://purl.org/coar/resource_type/c_5ce6   </p>
-<h4 id="option-2-using-dspace-functionality"><strong>Option 2: Using Dspace Functionality</strong></h4>
+<h3 id="option-2-using-dspace-functionality"><strong>Option 2: Using Dspace Functionality</strong></h3>
 <p>This option uses the internal functionality of controlled vocabularies in Dspace to present the COAR types. Note that this prototype implementation is valid Dspace version 5 and above. You may find the implementation steps below:</p>
 <p>[image to be added]</p>
 <p>1.Insert provided coar-types.xml in ${DSpace_HOME}/dspace/config/controlled-vocabularies/</p>
@@ -179,12 +181,12 @@ Current version of the vocabulary is <a http://vocabularies.coar-repositories.or
   vocabulary.plugin.coar.hierarchy.suggest = true # show selected type with its hierarchy;
   vocabulary.plugin.coar.delimiter = "::" # delimiter to use between different hierarchic levels;
 </code></pre>
-<h4 id="how-to-encode-it"><strong>How to encode it?</strong></h4>
+<h3 id="how-to-encode-it"><strong>How to encode it?</strong></h3>
 <p>Text or figure to be added
 Provide at least two values:
 1. the concept URI - http://purl.org/coar/resource_type/c_6501
 2. a label belongs to the concept</p>
-<h4 id="changes-required-for-each-implementation"><strong>Changes required for each implementation</strong></h4>
+<h3 id="changes-required-for-each-implementation"><strong>Changes required for each implementation</strong></h3>
 <p>The following table describes the changes in different levels on DSpace regarding each implementation. Repository managers can make all changes or just a basic implementation by changing only the submission process in one of the two options.</p>
 <table>
 <thead>
@@ -222,10 +224,10 @@ Provide at least two values:
 </tr>
 </tbody>
 </table>
-<h3 id="implementing-controlled-vocabularies-in-samvera-including-hyrax"><strong>Implementing Controlled Vocabularies in Samvera (including Hyrax)</strong></h3>
+<h2 id="implementation-in-samvera-including-hyrax"><strong>Implementation in Samvera (including Hyrax)</strong></h2>
 <p>Samvera (and some of its variants, including Hyrax and Haiku), is designed, 'out of the box' to be able to exploit the use of controlled vocabularies in both its data model and in its user interfaces for input (ingest), browsing and searching. This is facilitated by a component with the amusing name <a href="https://github.com/samvera/questioning_authority ">Questioning Authority (QA)</a>. There are, essentially, two ways to implement a controlled vocabulary in Samvera with QA - either to connect QA directly to a remote web service providing the vocabulary, or to copy the vocabulary into a file within the repository. The second of these two options is much simpler to configure, and the Samvera community has provided <a href="https://samvera.github.io/customize-metadata-controlled-vocabulary.html">clear documentation</a> about how to do this . It has the advantage of no reliance on any external resource once configured, but the disadvantage that the file must be manually updated if the vocabulary is revised.</p>
 <p>The format of the file used by QA is very simple, essentially linking the URI of each term in the vocabulary to the label which will be used in the repository's user interface. The data model in Samvera is already a linked-data graph, so the URIs in the vocabulary are used directly by the repository in metadata records.</p>
-<h3 id="repositories-which-have-implemented-coar-controlled-vocabularies"><strong>Repositories which have implemented COAR Controlled Vocabularies</strong></h3>
+<h2 id="repositories-implemented-coar-controlled-vocabularies"><strong>Repositories implemented COAR Controlled Vocabularies</strong></h2>
 <table>
 <thead>
 <tr>
@@ -335,5 +337,5 @@ Provide at least two values:
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-06-27 20:33:16
+Build Date UTC : 2019-06-27 20:48:48
 -->
