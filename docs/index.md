@@ -18,35 +18,41 @@ The URL prefix http://purl.org/coar is reserved as the namespace for the concept
 
 The <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/deliverables">Resource Type vocabulary</a> defines concepts to identify the genre of a resource. The Resource Type vocabulary builds on and extends the controlled list of publication types defined in info:eu-repo/semantics.
 <ul>
- <li>50 concepts supported
- <li>Labels available in (currently) 14 languages including Arabic, Catalan, Chinese, Czech, Dutch, English, French, German, Italian, Portuguese, Russian, Spanish, Japanese, Turkish.
- <li>Concepts are assigned permanent identifiers (URIs)
+ <li>Fifty concepts supported
+ <li>Labels available in (currently) 15 languages including Arabic, Catalan, Chinese, Czech, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Slovenian, Spanish, Turkish.
+ <li>Concepts are assigned permanent identifiers (purl.org URIs)
  <li>Hierarchical structure
  <li>Mappings ('matches') to terms of other controlled vocabularies
  <li>Published under CC-BY 4.0
 </ul>
-Current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/resource_types/2.0.draft">Resource Type Vocabulary v.2.0 Draft</a> (May 2018) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/resource_types">SKOS-XL RDF</a> and changelog are available at the given links.
+The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/resource_types/2.0.draft">Resource Type Vocabulary v.2.0 Draft</a> (May 2018) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/resource_types">SKOS-XL RDF</a> and changelog are available at the given links.
 
 ### **Access rights**
 
 <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary"> The Access Rights vocabulary</a> defines concepts to declare the access status of a resource. Multilingual labels regard regional distinctions in language and term. It builds on access rights defined in info:eu-repo/semantics
 
 <ul>
- <li>4 concepts supported
- <li>Labels available in (currently) 6 languages including English, Spanish, Turkish, French, Japanese, German.
- <li>Concepts are assigned permanent identifiers (URIs)
- <li>Hierarchical structure
+ <li>Four concepts supported
+ <li>Labels available in (currently) 13 languages including Arabic, Catalan, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Slovenian, Spanish, Turkish.
+ <li>Concepts are assigned permanent identifiers (purl.org URIs)
  <li>Mappings ('matches') to terms of other controlled vocabularies
  <li>Published under CC-BY 4.0
 </ul>
 
-Current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/access_rights">Access Rights Vocabulary v.1.0</a>  (January 2019) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/access_rights">SKOS-XL RDF</a> and changelog are available at the given link.
+The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/access_rights">Access Rights Vocabulary v.1.1</a>  (July 2019) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/access_rights">SKOS-XL RDF</a> and changelog are available at the given link.
 
 ### **Version types**
 
 <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/version-type-vocabulary">The Version Type vocabulary</a> defines concepts to declare the version of a resource. Multilingual labels regard regional distinctions in language and term. The concepts are adopted from the "<a href="https://www.niso.org/publications/niso-rp-8-2008-jav">Journal Article Versions (JAV): Recommendations of the NISO/ALPSP JAV Technical Working Group</a>".
 
-Current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/version_types">Version Type Vocabulary v.1 Draft</a> (July 2018) and github files for <a href=" https://github.com/coar-repositories/vocabularies/tree/master/version_types/snapshot">SKOS-XL RDF</a> and changelog  are available at the given link.
+<ul>
+<li>Eight concepts supported
+<li>Labels available in (currently) 9 languages including Dutch, English, French, German, Italian, Japanese, Russian, Spanish, Turkish
+<li>Concepts are assigned permanent identifiers (purl.org URIs)
+<li>Published under CC-BY 4.0
+</ul>
+
+The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/version_types">Version Type Vocabulary v.1 Draft</a> (July 2018) and github files for <a href=" https://github.com/coar-repositories/vocabularies/tree/master/version_types/snapshot">SKOS-XL RDF</a> and changelog  are available at the given link.
 
 ## **Mapping vocabularies**
 
@@ -157,9 +163,54 @@ Samvera (and some of its variants, including Hyrax and Haiku), is designed, 'out
 
 The format of the file used by QA is very simple, essentially linking the URI of each term in the vocabulary to the label which will be used in the repository's user interface. The data model in Samvera is already a linked-data graph, so the URIs in the vocabulary are used directly by the repository in metadata records.
 
+## **Implementation in Haplo**
+
+Install the <a href="https://github.com/haplo-org/haplo-repository/tree/master/hres_repo_openaire">[hres_repo_openaire]</a> plugin. This implements metadata conversion to the OpenAIRE v4 application profile, including COAR vocabularies, and declares it as a metadata format for OAI-PMH.
+
+While the schema can be configured through the administrative user interface, <a href="https://www.haplo.com/repository">[Haplo Repository]</a> prefers to implement schemas as plugins. These provide schema definitions and any associated metadata conversions.
+
+A typical repository may use over 100 plugins, providing building blocks of repository functionality, and cooperating to implement the overall repository schema. The flexibility of this architecture enables a single repository to manage research data, text based and non-text based outputs, and portfolios of outputs, all within the same system.
+
+In the case of the OpenAIRE plugin, it only needs to deliver the metadata conversion, as it can share the underlying schema with the core repository schema.
+
+## **Implementation in Open Journal Systems**
+
+Open Journal Systems <a href="https://pkp.sfu.ca/ojs/">(OJS)</a> is an open source journal management and publishing software, developed by the Public Knowledge Project <a href="https://pkp.sfu.ca/">(PKP)</a>.
+
+Since 2011 an OpenAIRE plugin helps OJS  journals to become compliant with the OpenAIRE infrastructure in terms of comprehensive metadata descriptions of open access articles. A new OpenAIRE plugin for OJS 3.1 was released in January 2019 which is a complete rewrite and is designed to replace the old plugin.
+
+It adds JATS as a new XML metadata format in OAI-PMH and complements the <a href="https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/v4.0.0/">OpenAIRE Guidelines for Literature Repository Managers v4</a>. JATS (Article Tagging Suite) is a NISO standard and is widely used as an archiving and interchange XML format for scientific articles.
+
+Besides adding a new endpoint to the OAI interface, the plugin implements COAR controlled vocabularies. The journal section settings are extended to let journal managers choose the proper publication type from the COAR resource type vocabulary that best describes the articles published in a specific section of a journal. COAR vocabularies are following the SKOS standard, and therefore a concept is described by a pair of URL and label. They can also be represented in custom elements in JATS metadata.
+
+In section settings OJS-journals can choose a publication type from the <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/deliverables/">COAR Resource Type vocabulary</a> that best describes the articles published in that section.
+
+The access right of a journal article is shown by using the <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/access-rights-vocabulary/">COAR Access Rights Vocabulary</a>.
+
+### **Installing using a release from Github**
+
+<ul>
+<li>Download the latest compatible release from https://github.com/ojsde/openAIRE/releases. Unzip.
+<li>Disable the old OpenAIRE plugin from Settings -> Website -> Plugins -> Generic Plugin -> OpenAIRE Plugin.
+<li>Remove the old OpenAIRE plugin folder from plugins/generic/.
+<li>Move the new OpenAIRE plugin folder to OJS plugins/generic/ folder.
+<li>Go to Settings -> Website -> Plugins -> Generic Plugin -> OpenAIRE Plugin and enable the plugin.
+</ul>
+
+If you are hosting a single site with several OJS journals, you can enable the plugin from the site settings. This enables the custom OAI-PMH metadata format for the whole site. However, other features, like allowing journals to define content types for articles within specific sections, requires that journals enable the plugin from their own settings.
+
+### **How to use the plugin?**
+
+After enabling the plugin you will see a new metadata format called oai_openaire_jats in your OAI-PMH.
+
+You can go to Settings > Journal > Sections and edit the section settings. The settings form has a pull down menu that allows you to select a COAR Resource Type that best describes the articles published in that section. The selected resource type will be shown in the OAI-PMH metadata.
+
+For more about the implementation, please visit OJS-de.net Project’s <a href="https://github.com/ojsde/openAIRE">Github page</a>.
+
 ## **Repositories which have implemented COAR Controlled Vocabularies**
 
 | Country | Institution | Software | Repository Name | Type of implementation
 | ----------- | -------- | --------------- | ---------------------- | -------------|
 | Portugal | University of Minho | DSpace | <a href="http://repositorium.sdum.uminho.pt">Repositorium</a> | Dropdown list
-| Spain | Spanish National Research Council | DSpace | <a href="https://digital.csic.es">DIGITAL.CSIC</a> | DSpace functionality
+| Spain | Spanish National Research Council | DSpace-CRIS | <a href="https://digital.csic.es">DIGITAL.CSIC</a> | DSpace functionality
+| United Kingdom | Rothamsted Research | Haplo | <a href="https://repository.rothamsted.ac.uk">Rothamsted Repository</a> | Haplo plugin
