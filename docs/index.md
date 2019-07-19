@@ -25,7 +25,7 @@ The <a href="https://www.coar-repositories.org/activities/repository-interoperab
  <li>Mappings ('matches') to terms of other controlled vocabularies
  <li>Published under CC-BY 4.0
 </ul>
-The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/resource_types/2.0.draft">Resource Type Vocabulary v.2.0 Draft</a> (May 2018) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/resource_types">SKOS-XL RDF</a> and changelog are available at the given links.
+The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/resource_types/">Resource Type Vocabulary v.2.0</a> (July 2019) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/resource_types">SKOS-XL RDF</a> and changelog are available at the given links.
 
 ### **Access rights**
 
@@ -39,7 +39,7 @@ The current version of the vocabulary is <a href="http://vocabularies.coar-repos
  <li>Published under CC-BY 4.0
 </ul>
 
-The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/access_rights">Access Rights Vocabulary v.1.1</a>  (July 2019) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/access_rights">SKOS-XL RDF</a> and changelog are available at the given link.
+The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/access_rights">Access Rights Vocabulary v.1.0</a> (December 2018) and github files for <a href="https://github.com/coar-repositories/vocabularies/tree/master/access_rights">SKOS-XL RDF</a> and changelog are available at the given link.
 
 ### **Version types**
 
@@ -52,7 +52,7 @@ The current version of the vocabulary is <a href="http://vocabularies.coar-repos
 <li>Published under CC-BY 4.0
 </ul>
 
-The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/version_types">Version Type Vocabulary v.1 Draft</a> (July 2018) and github files for <a href=" https://github.com/coar-repositories/vocabularies/tree/master/version_types/snapshot">SKOS-XL RDF</a> and changelog  are available at the given link.
+The current version of the vocabulary is <a href="http://vocabularies.coar-repositories.org/documentation/version_types">Version Type Vocabulary v.1.0 Draft</a> (July 2018) and github files for <a href=" https://github.com/coar-repositories/vocabularies/tree/master/version_types/snapshot">SKOS-XL RDF</a> and changelog  are available at the given link.
 
 ## **Mapping vocabularies**
 
@@ -213,4 +213,4 @@ For more about the implementation, please visit OJS-de.net Project’s <a href="
 | ----------- | -------- | --------------- | ---------------------- | -------------|
 | Portugal | University of Minho | DSpace | <a href="http://repositorium.sdum.uminho.pt">Repositorium</a> | Dropdown list
 | Spain | Spanish National Research Council | DSpace-CRIS | <a href="https://digital.csic.es">DIGITAL.CSIC</a> | DSpace functionality
-| United Kingdom | Rothamsted Research | Haplo | <a href="https://repository.rothamsted.ac.uk">Rothamsted Repository</a> | Haplo plugin
+| United Kingdom | Rothamsted Research | Haplo | <a href="https://repository.rothamsted.ac.uk">Rothamsted Repository</a> | Out-of-the-box or plugin
