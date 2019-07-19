@@ -10,7 +10,7 @@ COAR actively works towards the alignment of repository networks and other syste
 
 The <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies">COAR Controlled Vocabularies</a> are governed and maintained by the Editorial Board. In order to define the controlled vocabularies, the Editorial Board analyses existing vocabularies and dictionaries and will use the most appropriate existing terms whenever possible. In the case where there are gaps, new terms are defined by the group.
 
-The COAR Controlled Vocabularies are described in SKOS. In SKOS, concepts are identified using URIs, labels to the concepts are uniquely offered in multiple languages, notes allow for description, as well as different annotations and concepts from other vocabularies can be linked. Workflow and web-based editorial processes are managed on VocBench.
+The COAR Controlled Vocabularies are described in SKOS. In SKOS, concepts are identified using URIs, labels to the concepts are uniquely offered in multiple languages, notes allow for description, as well as different annotations and concepts from other vocabularies can be linked. Workflow and web-based editorial processes used to be managed on VocBench until June 2019. 
 
 The URL prefix http://purl.org/coar is reserved as the namespace for the concepts of the COAR Controlled Vocabularies. <a href="https://www.coar-repositories.org/activities/repository-interoperability/coar-vocabularies/controlled-vocabularies-faq">FAQs</a> for COAR Controlled Vocabularies are available.
 
