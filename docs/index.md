@@ -163,6 +163,10 @@ Samvera (and some of its variants, including Hyrax and Haiku), is designed, 'out
 
 The format of the file used by QA is very simple, essentially linking the URI of each term in the vocabulary to the label which will be used in the repository's user interface. The data model in Samvera is already a linked-data graph, so the URIs in the vocabulary are used directly by the repository in metadata records.
 
+## **Implementation in Eprints**
+
+Eprints community has developed a [plug-in](http://bazaar.eprints.org/422/) for COAR's Resource Type Controlled Vocabulary. The documentation, file links and other details are available at the given link. 
+
 ## **Implementation in Haplo**
 
 Install the <a href="https://github.com/haplo-org/haplo-repository/tree/master/hres_repo_openaire">[hres_repo_openaire]</a> plugin. This implements metadata conversion to the OpenAIRE v4 application profile, including COAR vocabularies, and declares it as a metadata format for OAI-PMH.
