@@ -165,7 +165,7 @@ The format of the file used by QA is very simple, essentially linking the URI of
 
 ## **Implementation in Eprints**
 
-Eprints community has developed a [plug-in](http://bazaar.eprints.org/422/) for COAR's Resource Type Controlled Vocabulary. The documentation, file links and other details are available at the given link. 
+Eprints community has developed a [plug-in](http://bazaar.eprints.org/422/) for COAR's Resource Type Controlled Vocabulary. The documentation, file links and other details are availabl at the given link. 
 
 ## **Implementation in Haplo**
 
