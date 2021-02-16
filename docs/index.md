@@ -68,7 +68,7 @@ bookPart | bookPart  | book part | http://purl.org/coar/resource_type/c_3248
 
 ## **Implementation in DSpace and DSpace-CRIS**
 
-COAR vocabularies can be implemented in repositories operating on DSpace by customising input forms or using the Dspace software functionality.
+COAR vocabularies can be implemented in repositories operating on DSpace by customising input forms or using the DSpace software functionality.
 
 ![DSpace workflow approach](https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/1_workflow.png)<p align="center"> Figure 1. DSpace workflow approach</a>
 
@@ -102,9 +102,9 @@ This option includes a dropdown list of the fields to allow the submitter to sel
 3.Provide a way to show (flat term) type name instead of URL eg. Show "software" instead of > http://purl.org/coar/resource_type/c_5ce6   
 
 
-### **Option 2: Using Dspace Functionality**
+### **Option 2: Using DSpace Functionality**
 
-This option uses the internal functionality of controlled vocabularies in Dspace to present the COAR types. Note that this prototype implementation is valid Dspace version 5 and above. You may find the implementation steps below:
+This option uses the internal functionality of controlled vocabularies in DSpace to present the COAR types. Note that this prototype implementation is valid DSpace version 5 and above. You may find the implementation steps below:
 
 ![Option 2](https://raw.githubusercontent.com/coar-repositories/vocabularies-implementation-guide/master/images/3_option2_DSpace_functionality.png)<p align="center"> Figure 3. Option 2: Using DSpace Functionality</a>
 
@@ -144,12 +144,13 @@ Provide at least two values:
 1. the concept URI - http://purl.org/coar/resource_type/c_6501
 2. a label belongs to the concept
 
+> DSpace-CRIS 7 will include support for the COAR Resource Types vocabulary out-of-box, the defined xml file can be [found here](https://github.com/4Science/DSpace/blob/dspace-cris-7/dspace/config/controlled-vocabularies/types.xml) (it can be used also with older versions of DSpace/DSpace-CRIS)
 
 ### **Changes required for each implementation**
 
 The following table describes the changes in different levels on DSpace regarding each implementation. Repository managers can make all changes or just a basic implementation by changing only the submission process in one of the two options.
 
-| Dspace | Option 1 – Dropdown | Option 2 – Software functionality
+| DSpace | Option 1 – Dropdown | Option 2 – Software functionality
 | ------ | ------------------- | -----------------------|
 | Submission process | Change value pairs on the input-forms.xml | Use Controlled Vocabularies functionality
 | Recorded info | Saves the codes (e.g:c_ecc8) | Saved the text string (e.g.:text:book)
